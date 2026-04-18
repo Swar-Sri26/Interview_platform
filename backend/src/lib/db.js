@@ -1,4 +1,4 @@
-import { ENV } from '../env.js';
+import { ENV } from './env.js';
 import mongoose from 'mongoose';
 
 const mongo_url = ENV.MONGO_URI;
