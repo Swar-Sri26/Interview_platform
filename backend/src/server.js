@@ -10,7 +10,7 @@ import { inngest } from './lib/ingest.js'
 const app=express();
 
 app.use(express.json());
-//credentials:true meaning server allows browser to inclide cookies on requests j
+//credentials:true meaning server allows browser to include cookies on requests 
 app.use(cors({origin:ENV.CLIENT_URL,credentials:true}))
 
 app.use("api/inngest",serve({client:inngest,functions}));

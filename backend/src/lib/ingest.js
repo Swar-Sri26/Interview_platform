@@ -30,6 +30,7 @@ const syncUser= inngest.createFunction(
             await connectDB(); 
             const {id}=event.data;
             await User.deleteOne({clerkId:id});
+            //todo: something
         }
     );
     export const functions=[syncUser,deleteUserFromDB]
