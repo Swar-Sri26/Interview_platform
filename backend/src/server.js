@@ -5,7 +5,7 @@ import {serve} from '@inngest/express'
 import {ENV} from './env.js'
 
 import './model/db.js'
-import { inngest } from './lib/ingest.js'
+import { inngest,functions } from './lib/ingest.js'
 
 const app=express();
 
