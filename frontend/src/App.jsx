@@ -7,8 +7,9 @@ function App() {
     <>
     <header>
         <Show when="signed-out">
-          <SignInButton></SignInButton>
+          <SignInButton>
           <button>click me to signIn</button>
+          </SignInButton>
           <SignUpButton />
         </Show>
         <Show when="signed-in">

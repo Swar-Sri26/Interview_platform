@@ -1,14 +1,14 @@
 import express from 'express'
 import path from 'path'
 import cors from 'cors'
-import {serve} from '@inngest/express'
+import {serve} from 'inngest/express'
 import {ENV} from './env.js'
 
-import './model/db.js'
+import {connectDB} from './model/db.js' 
 import { inngest,functions } from './lib/ingest.js'
 
 const app=express();
-
+connectDB();
 app.use(express.json());
 //credentials:true meaning server allows browser to include cookies on requests 
 app.use(cors({origin:ENV.CLIENT_URL,credentials:true}))

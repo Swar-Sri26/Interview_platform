@@ -1,6 +1,6 @@
 import {Inngest} from 'inngest'
-import {connectDB} from './db.js'
-import User from './model/user.js'
+import {connectDB} from '../model/db.js'
+import User from '../model/user.js'
 
 export const inngest = new Inngest({id:"talent-iq"});
 
@@ -32,6 +32,6 @@ const syncUser= inngest.createFunction(
             await User.deleteOne({clerkId:id});
             //todo: something
         }
-    );
+    )
     export const functions=[syncUser,deleteUserFromDB]
 
